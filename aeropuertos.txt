@@ -1,0 +1,10 @@
+Aeropuerto|Aeropuerto de Moscú|Moscú|5000
+Aeropuerto|Aeropuerto de San Petersburgo|San Petersburgo|4500
+Aeropuerto|Aeropuerto de Kazán|Kazán|3000
+Aeropuerto|Aeropuerto de Novosibirsk|Novosibirsk|3500
+Aeropuerto|Aeropuerto de Sochi|Sochi|2000
+Aeropuerto|Aeropuerto de Vladivostok|Vladivostok|1500
+Aeropuerto|Aeropuerto de Ekaterimburgo|Ekaterimburgo|2800
+Aeropuerto|Aeropuerto de Samara|Samara|2500
+Aeropuerto|Aeropuerto de Rostov|Rostov|2700
+Aeropuerto|Aeropuerto de Nizhni Nóvgorod|Nizhni Nóvgorod|2400

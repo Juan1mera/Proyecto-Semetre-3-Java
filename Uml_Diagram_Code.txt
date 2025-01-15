@@ -1,0 +1,69 @@
+@startuml
+class Aeropuerto {
+    - nombre: String
+    - ubicacion: String
+    - capacidad: int
+    --
+    + Aeropuerto(nombre: String, ubicacion: String, capacidad: int)
+    + getNombre(): String
+    + setNombre(nombre: String): void
+    + getUbicacion(): String
+    + setUbicacion(ubicacion: String): void
+    + getCapacidad(): int
+    + setCapacidad(capacidad: int): void
+}
+
+class Vuelo {
+    - numeroVuelo: String
+    - origen: String
+    - destino: String
+    - horaSalida: String
+    - horaLlegada: String
+    - capacidadMaxima: int
+    --
+    + Vuelo(numeroVuelo: String, origen: String, destino: String, horaSalida: String, horaLlegada: String, capacidadMaxima: int)
+    + getNumeroVuelo(): String
+    + setNumeroVuelo(numeroVuelo: String): void
+    + getOrigen(): String
+    + setOrigen(origen: String): void
+    + getDestino(): String
+    + setDestino(destino: String): void
+    + getHoraSalida(): String
+    + setHoraSalida(horaSalida: String): void
+    + getHoraLlegada(): String
+    + setHoraLlegada(horaLlegada: String): void
+    + getCapacidadMaxima(): int
+    + setCapacidadMaxima(capacidadMaxima: int): void
+}
+
+class Pasajero {
+    - nombre: String
+    - documento: String
+    - vueloAsignado: String
+    --
+    + Pasajero(nombre: String, documento: String, vueloAsignado: String)
+    + getNombre(): String
+    + setNombre(nombre: String): void
+    + getDocumento(): String
+    + setDocumento(documento: String): void
+    + getVueloAsignado(): String
+    + setVueloAsignado(vueloAsignado: String): void
+}
+
+class Sistema {
+    - listaAeropuertos: List<Aeropuerto>
+    --
+    + Sistema()
+    + agregarAeropuerto(aeropuerto: Aeropuerto): void
+    + getListaAeropuertos(): List<Aeropuerto>
+    + buscarAeropuerto(nombre: String): Aeropuerto
+    + agregarVuelo(nombreAeropuerto: String, vuelo: Vuelo): void
+    + agregarPasajero(numeroVuelo: String, pasajero: Pasajero): void
+    + cargarVuelos(nombreAeropuerto: String): List<Vuelo>
+    + cargarPasajeros(numeroVuelo: String): List<Pasajero>
+}
+
+Aeropuerto "1" --> "*" Vuelo : contiene
+Vuelo "1" --> "*" Pasajero : contiene
+Sistema "1" --> "*" Aeropuerto : administra
+@enduml

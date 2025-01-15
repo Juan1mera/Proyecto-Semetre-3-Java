@@ -1,0 +1,20 @@
+Aeropuerto de Moscú|MSK001|Moscú|San Petersburgo|06:00|07:30|180
+Aeropuerto de Moscú|MSK002|Moscú|Kazán|08:00|09:15|150
+Aeropuerto de Moscú|MSK003|Moscú|Sochi|10:00|12:00|200
+Aeropuerto de Moscú|MSK004|Moscú|Vladivostok|14:00|22:00|220
+Aeropuerto de Moscú|MSK005|Moscú|Rostov|16:00|18:00|170
+Aeropuerto de Moscú|MSK006|Moscú|Ekaterimburgo|18:30|21:00|200
+Aeropuerto de Moscú|MSK007|Moscú|Samara|20:00|22:00|180
+Aeropuerto de Moscú|MSK008|Moscú|Nizhni Nóvgorod|22:30|23:15|120
+Aeropuerto de Moscú|MSK009|Moscú|Novosibirsk|23:00|05:00|250
+Aeropuerto de Moscú|MSK010|Moscú|Belgorod|11:00|12:00|150
+Aeropuerto de Moscú|MSK011|Moscú|Krasnodar|09:30|11:30|160
+Aeropuerto de Moscú|MSK012|Moscú|Perm|13:00|15:00|190
+Aeropuerto de San Petersburgo|SPB001|San Petersburgo|Moscú|07:00|08:30|180
+Aeropuerto de San Petersburgo|SPB002|San Petersburgo|Kazán|09:30|11:00|150
+Aeropuerto de San Petersburgo|SPB003|San Petersburgo|Sochi|12:00|14:30|200
+Aeropuerto de San Petersburgo|SPB004|San Petersburgo|Vladivostok|16:00|01:00|220
+Aeropuerto de San Petersburgo|SPB005|San Petersburgo|Novosibirsk|18:00|02:30|250
+Aeropuerto de Kazán|KZN001|Kazán|Moscú|06:00|07:15|150
+Aeropuerto de Kazán|KZN002|Kazán|Sochi|10:00|12:30|170
+Aeropuerto de Kazán|KZN003|Kazán|San Petersburgo|14:00|16:15|160

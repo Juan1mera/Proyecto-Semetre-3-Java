@@ -61,9 +61,43 @@ class Sistema {
     + agregarPasajero(numeroVuelo: String, pasajero: Pasajero): void
     + cargarVuelos(nombreAeropuerto: String): List<Vuelo>
     + cargarPasajeros(numeroVuelo: String): List<Pasajero>
+    + agregarPiloto(piloto: Piloto): void
+    + cargarPilotos(numeroVuelo: String): List<Piloto>
+    + agregarEquipaje(equipaje: Equipaje): void
+    + cargarEquipaje(propietario: String): List<Equipaje>
+}
+
+class Piloto {
+    - nombre: String
+    - licencia: String
+    - vueloAsignado: String
+    --
+    + Piloto(nombre: String, licencia: String, vueloAsignado: String)
+    + getNombre(): String
+    + setNombre(nombre: String): void
+    + getLicencia(): String
+    + setLicencia(licencia: String): void
+    + getVueloAsignado(): String
+    + setVueloAsignado(vueloAsignado: String): void
+}
+
+class Equipaje {
+    - propietario: String
+    - peso: double
+    - esFragil: boolean
+    --
+    + Equipaje(propietario: String, peso: double, esFragil: boolean)
+    + getPropietario(): String
+    + setPropietario(propietario: String): void
+    + getPeso(): double
+    + setPeso(peso: double): void
+    + isEsFragil(): boolean
+    + setEsFragil(esFragil: boolean): void
 }
 
 Aeropuerto "1" --> "*" Vuelo : contiene
 Vuelo "1" --> "*" Pasajero : contiene
 Sistema "1" --> "*" Aeropuerto : administra
+Vuelo "1" --> "2" Piloto : asigna
+Pasajero "1" --> "3" Equipaje : tiene
 @enduml

@@ -15,7 +15,7 @@ public class Main {
             System.out.println("3. Agregar Vuelo");
             System.out.println("4. Agregar Pasajero a Vuelo");
             System.out.println("5. Ver Vuelos por Aeropuerto");
-            System.out.println("6. Ver Pasajeros de un Vuelo");
+            System.out.println("6. Ver Detalles de un Vuelo");
             System.out.println("7. Buscar Pasajero");
             System.out.println("8. Asignar Piloto a Vuelo");
             System.out.println("9. Agregar Equipaje a Pasajero");
@@ -100,14 +100,60 @@ public class Main {
                 case 6 -> {
                     System.out.print("Ingrese el número del vuelo: ");
                     String numeroVuelo = scanner.nextLine();
-                    List<Pasajero> pasajeros = sistema.cargarPasajeros(numeroVuelo);
-                    if (!pasajeros.isEmpty()) {
-                        System.out.println("\nPasajeros del vuelo:");
-                        for (Pasajero p : pasajeros) {
-                            System.out.printf("Nombre: %s | Documento: %s\n", p.getNombre(), p.getDocumento());
+
+                    // Obtener detalles del vuelo
+                    Vuelo vuelo = null;
+                    String aeropuertoOrigen = null;
+                    for (Aeropuerto aeropuerto : sistema.getListaAeropuertos()) {
+                        List<Vuelo> vuelos = sistema.cargarVuelos(aeropuerto.getNombre());
+                        for (Vuelo v : vuelos) {
+                            if (v.getNumeroVuelo().equalsIgnoreCase(numeroVuelo)) {
+                                vuelo = v;
+                                aeropuertoOrigen = aeropuerto.getNombre();
+                                break;
+                            }
+                        }
+                        if (vuelo != null) break;
+                    }
+
+                    if (vuelo == null) {
+                        System.out.println("Vuelo no encontrado.");
+                        break;
+                    }
+
+                    System.out.printf("\nDetalles del Vuelo [%s]:\n", numeroVuelo);
+                    System.out.printf("Origen: %s (Aeropuerto: %s)\nDestino: %s\nSalida: %s\nLlegada: %s\nCapacidad Máxima: %d\n",
+                            vuelo.getOrigen(), aeropuertoOrigen, vuelo.getDestino(), vuelo.getHoraSalida(), vuelo.getHoraLlegada(), vuelo.getCapacidadMaxima());
+
+                    // Obtener pilotos
+                    List<Piloto> pilotos = sistema.obtenerPilotosDeVuelo(numeroVuelo);
+                    System.out.println("\nPilotos asignados:");
+                    if (!pilotos.isEmpty()) {
+                        for (Piloto piloto : pilotos) {
+                            System.out.printf("Nombre: %s | Licencia: %s\n", piloto.getNombre(), piloto.getLicencia());
                         }
                     } else {
-                        System.out.println("No se encontraron pasajeros para el vuelo especificado.");
+                        System.out.println("No hay pilotos asignados.");
+                    }
+
+                    // Obtener pasajeros y su equipaje
+                    List<Pasajero> pasajeros = sistema.cargarPasajeros(numeroVuelo);
+                    System.out.println("\nPasajeros:");
+                    if (!pasajeros.isEmpty()) {
+                        for (Pasajero pasajero : pasajeros) {
+                            System.out.printf("Nombre: %s | Documento: %s\n", pasajero.getNombre(), pasajero.getDocumento());
+                            List<Equipaje> equipajes = sistema.obtenerEquipajeDePasajero(pasajero.getDocumento());
+                            System.out.println("  Equipaje:");
+                            if (!equipajes.isEmpty()) {
+                                for (Equipaje equipaje : equipajes) {
+                                    System.out.printf("    Peso: %.2f | Frágil: %b\n", equipaje.getPeso(), equipaje.isEsFragil());
+                                }
+                            } else {
+                                System.out.println("    Sin equipaje.");
+                            }
+                        }
+                    } else {
+                        System.out.println("No hay pasajeros en este vuelo.");
                     }
                 }
                 case 7 -> {
@@ -150,6 +196,8 @@ public class Main {
                     }
                 }
                 case 9 -> {
+                   
+
                     System.out.print("Ingrese el documento del pasajero: ");
                     String documento = scanner.nextLine();
                     List<Equipaje> equipajes = sistema.obtenerEquipajeDePasajero(documento);

@@ -8,3 +8,13 @@ Aeropuerto|Aeropuerto de Ekaterimburgo|Ekaterimburgo|2800
 Aeropuerto|Aeropuerto de Samara|Samara|2500
 Aeropuerto|Aeropuerto de Rostov|Rostov|2700
 Aeropuerto|Aeropuerto de Nizhni Nóvgorod|Nizhni Nóvgorod|2400
+Aeropuerto|Aeropuerto de Belgorod|Belgorod|2300
+Aeropuerto|Aeropuerto de Krasnodar|Krasnodar|2600
+Aeropuerto|Aeropuerto de Perm|Perm|2200
+Aeropuerto|Aeropuerto de Irkutsk|Irkutsk|1800
+Aeropuerto|Aeropuerto de Ufa|Ufa|2000
+Aeropuerto|Aeropuerto de Volgogrado|Volgogrado|2100
+Aeropuerto|Aeropuerto de Omsk|Omsk|1700
+Aeropuerto|Aeropuerto de Krasnoyarsk|Krasnoyarsk|1900
+Aeropuerto|Aeropuerto de Chelyabinsk|Chelyabinsk|1600
+Aeropuerto|Aeropuerto de Surgut|Surgut|1400

@@ -18,3 +18,5 @@ Aeropuerto de San Petersburgo|SPB005|San Petersburgo|Novosibirsk|18:00|02:30|250
 Aeropuerto de Kazán|KZN001|Kazán|Moscú|06:00|07:15|150
 Aeropuerto de Kazán|KZN002|Kazán|Sochi|10:00|12:30|170
 Aeropuerto de Kazán|KZN003|Kazán|San Petersburgo|14:00|16:15|160
+Aeropuerto de Ekaterimburgo|EKB001|Ekaterimburgo|Rostov|06:30|08:45|140
+Aeropuerto de Ekaterimburgo|EKB002|Ekaterimburgo|Novosibirsk|07:00|10:00|190

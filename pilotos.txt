@@ -1,1 +1,16 @@
 Pepito Juarez|A2|MSK010
+Luis Sanchez|A3|MSK001
+Maria Lopez|B1|SPB001
+Carlos Gutierrez|B2|MSK002
+Ana Ramirez|C1|KZN001
+Jorge Perez|C2|SPB002
+Elena Alvarez|D1|MSK003
+Fernando Torres|D2|MSK004
+Gabriela Moreno|E1|MSK005
+Pedro Alvarado|E2|MSK006
+Lucia Fernandez|F1|SPB003
+Esteban Castro|F2|SPB004
+Carolina Vargas|G1|KZN002
+Santiago Ortiz|G2|KZN003
+Nicolas Ruiz|H1|MSK007
+Andrea Martinez|H2|MSK008

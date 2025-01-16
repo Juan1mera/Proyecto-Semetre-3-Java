@@ -17,7 +17,9 @@ public class Main {
             System.out.println("5. Ver Vuelos por Aeropuerto");
             System.out.println("6. Ver Pasajeros de un Vuelo");
             System.out.println("7. Buscar Pasajero");
-            System.out.println("8. Salir");
+            System.out.println("8. Asignar Piloto a Vuelo");
+            System.out.println("9. Agregar Equipaje a Pasajero");
+            System.out.println("10. Salir");
             System.out.print("Seleccione una opción: ");
 
             int opcion = scanner.nextInt();
@@ -131,6 +133,41 @@ public class Main {
                     }
                 }
                 case 8 -> {
+                    System.out.print("Ingrese el número del vuelo: ");
+                    String numeroVuelo = scanner.nextLine();
+                    List<Piloto> pilotos = sistema.obtenerPilotosDeVuelo(numeroVuelo);
+                    if (pilotos.size() >= 2) {
+                        System.out.println("El vuelo ya tiene asignados dos pilotos.");
+                    } else {
+                        System.out.print("Ingrese el nombre del piloto: ");
+                        String nombre = scanner.nextLine();
+                        System.out.print("Ingrese la licencia del piloto: ");
+                        String licencia = scanner.nextLine();
+
+                        Piloto piloto = new Piloto(nombre, licencia, numeroVuelo);
+                        sistema.agregarPiloto(piloto);
+                        System.out.println("Piloto asignado con éxito.");
+                    }
+                }
+                case 9 -> {
+                    System.out.print("Ingrese el documento del pasajero: ");
+                    String documento = scanner.nextLine();
+                    List<Equipaje> equipajes = sistema.obtenerEquipajeDePasajero(documento);
+                    if (equipajes.size() >= 3) {
+                        System.out.println("El pasajero ya tiene asignados tres equipajes.");
+                    } else {
+                        System.out.print("Ingrese el peso del equipaje: ");
+                        double peso = scanner.nextDouble();
+                        System.out.print("¿El equipaje es frágil? (true/false): ");
+                        boolean esFragil = scanner.nextBoolean();
+                        scanner.nextLine(); // Limpiar buffer
+
+                        Equipaje equipaje = new Equipaje(documento, peso, esFragil);
+                        sistema.agregarEquipaje(equipaje);
+                        System.out.println("Equipaje agregado con éxito.");
+                    }
+                }
+                case 10 -> {
                     System.out.println("Saliendo del sistema. Hasta luego.");
                     scanner.close();
                     return;

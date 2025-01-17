@@ -78,8 +78,14 @@ public class Main {
                     String nombrePasajero = scanner.nextLine();
                     System.out.print("Ingrese el documento del pasajero: ");
                     String documentoPasajero = scanner.nextLine();
+                    System.out.print("Ingresa el pasaporte del pasajero: ");
+                    String pasaportePasajero = scanner.nextLine();
+                    System.out.print("Ingresa la edad del pasajero: ");
+                    String edadPasajero = scanner.nextLine();
+                    System.out.print("Ingresa en que calse viaja el pasajero(Economico/Intercambio/Turismo): ");
+                    String viajePasajero = scanner.nextLine();
 
-                    Pasajero pasajero = new Pasajero(nombrePasajero, documentoPasajero, numeroVuelo);
+                    Pasajero pasajero = new Pasajero(nombrePasajero, documentoPasajero, pasaportePasajero, edadPasajero, viajePasajero, numeroVuelo);
                     sistema.agregarPasajero(numeroVuelo, pasajero);
                     System.out.println("Pasajero agregado con éxito al vuelo.");
                 }

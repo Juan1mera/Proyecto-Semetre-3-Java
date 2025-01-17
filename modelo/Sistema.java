@@ -123,7 +123,7 @@ public class Sistema {
             while ((line = reader.readLine()) != null) {
                 String[] parts = line.split("\\|");
                 if (parts[0].equalsIgnoreCase(numeroVuelo)) {
-                    pasajeros.add(new Pasajero(parts[1], parts[2], parts[3]));
+                    pasajeros.add(new Pasajero(parts[1], parts[2], parts[3], parts[4], parts[5], parts[6]));
                 }
             }
         } catch (IOException e) {
